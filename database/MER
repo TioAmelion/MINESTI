@@ -1,0 +1,6 @@
+utilizador(id_utilizador, email_utilizador, nome_utilizador, senha_utilizador)
+estudante(id_estudante, id_utlizador, nome_estudante, bi_estudante, data_nascimento, genero_estudante['masculino', 'feminino'])
+universidade(id_universidade, nome_univerisidade, localizacao, id_utilizador)
+faculdade(id_faculdade, id_universidade, nome_faculdade, id_utilizador)
+curso(id_curso, id_faculdade, nome_curso, id_utilizador)
+formacao(id_formacao, id_estudante, id_curso, tipo['Licenciado', 'Msc', 'PhD'])
