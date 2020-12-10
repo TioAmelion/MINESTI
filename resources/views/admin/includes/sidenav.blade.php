@@ -28,7 +28,7 @@
             </li>
             
             <li class="nav-item">
-              <a class="nav-link @isset($instituicao){{$instituicao}}@endisset" href="{{ url('instituicoes') }}">
+              <a class="nav-link @isset($instituicao) {{ $instituicao }} @endisset" href="{{ route('universidade.index') }}">
                 <i class="ni ni-istanbul text-danger"></i>
                 <span class="nav-link-text"><h3>Instituições</h3></span>
               </a>
@@ -58,13 +58,13 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link @isset($estudante){{$estudante}}@endisset" href="{{ url('estudantes') }}">
+              <a class="nav-link @isset($estudante){{$estudante}}@endisset" href="{{ url('formacao') }}">
                 <i class="ni ni-hat-3 text-warning"></i>
                 <span class="nav-link-text"><h3>Formações</h3></span>
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link @isset($estudante){{$estudante}}@endisset" href="{{ url('estudantes') }}">
+              <a class="nav-link @isset($estudante){{$estudante}}@endisset" href="{{ url('perfil') }}">
                 <i class="ni ni-circle-08 text-dark"></i>
                 <span class="nav-link-text"><h3>Perfil</h3></span>
               </a>

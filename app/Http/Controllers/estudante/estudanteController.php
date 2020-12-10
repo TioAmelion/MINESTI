@@ -19,7 +19,8 @@ class estudanteController extends Controller
      */
     public function index()
     {
-        //
+        $dados = estudante::all();
+        return view('estudantes', ['dados' => $dados, 'estudante' => 'active']);
     }
 
     /**
@@ -82,9 +83,10 @@ class estudanteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show()
     {
-        //
+        // $dados = estudante::all();
+        return view('perfil');
     }
 
     /**

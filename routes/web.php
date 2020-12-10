@@ -6,12 +6,17 @@ Route::group(['middleware' => ['auth']], function(){
 
 	Route::resource('user', 'Auth\usersController');
     Route::post('user/update', 'Auth\usersController@update')->name('user.update');
-	Route::get('/home', 'HomeController@index')->name('home');
+	Route::get('home', 'HomeController@index')->name('home');
 
-	//instituicoes
-	Route::get('/instituicoes', 'Admin\universidadeController@index');
+	//universidade
+	Route::resource('universidade', 'Admin\universidadeController');
+	Route::post('universidade/update', 'Admin\universidadeController@update')->name('universidade.update');
+	Route::get('universidade/destroy/{id}', 'Admin\universidadeController@destroy');
 
-	Route::post('/teste', 'Auth\usersController@store')->name('teste');
+	//universidade
+	Route::resource('faculdade', 'Admin\faculdadeController');
+	Route::post('faculdade/update', 'Admin\faculdadeController@update')->name('faculdade.update');
+	Route::get('faculdade/show/{id}', 'Admin\faculdadeController@show');
 
 	//menu provincias
 	Route::get('/provincias', function () {
@@ -24,9 +29,10 @@ Route::group(['middleware' => ['auth']], function(){
 	});
 
 	//estudantes
-	Route::get('/estudantes', function () {
-	    return view('estudantes', ['estudante' => 'active']);
-	});
+	Route::get('/estudantes', 'estudante\estudanteController@index');
+	Route::get('/perfil', 'estudante\estudanteController@show');
+	Route::get('/formacao', 'Admin\formacaoController@index');
+	
 
 	//cursos
 	Route::get('/cursos', function () {

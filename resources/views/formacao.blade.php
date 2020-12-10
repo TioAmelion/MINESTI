@@ -10,12 +10,12 @@
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="ni ni-circle-08"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Utilizadores</a></li>
+                  <li class="breadcrumb-item"><a href="#">Formações do estudante</a></li>
                 </ol>
               </nav>
             </div>
             <div class="col-lg-6 col-5 text-right">
-            <button type="button" name="create_record" id="create_record" class="btn btn-sm btn-neutral"><i class="ni ni-single-02"></i> Novo Usuario</button>
+            <button type="button" name="create_record" id="create_record" class="btn btn-sm btn-neutral"><i class="ni ni-single-02"></i> Nova Formação</button>
             <a href="#" class="btn btn-sm btn-neutral">Filtrar</a>
             </div>
           </div>
@@ -27,62 +27,31 @@
     <div class="container-fluid mt--6">
 
       <div class="row">
-        <div class="col">
-          <div class="card bg-default shadow">
-            <div class="card-header bg-transparent border-0">
-              <h3 class="text-white mb-0">Estudantes</h3>
-            </div>
-            <div class="table-responsive">
-              <table class="table align-items-center table-dark table-flush">
-                <thead class="thead-dark">
-                  <tr>
-                    <th scope="col" class="sort" data-sort="name">Nome</th>
-                    <th scope="col" class="sort" data-sort="budget">Nº BI</th>
-                    <th scope="col" class="sort" data-sort="status">Data de Nascimento</th>
-                    <th scope="col" class="sort" data-sort="status">Telefone</th>
-                    <th scope="col">Opções</th>
-                    <th scope="col"></th>
-                  </tr>
-                </thead>
-                <tbody class="list">
-                  @foreach($dados as $dados)
-                  <tr>
-                    <th scope="row">
-                      <div class="media align-items-center">
-                        <a href="#" class="avatar rounded-circle mr-3">
-                          <img alt="Image placeholder" src="../assets/img/theme/bootstrap.jpg">
-                        </a>
-                        <div class="media-body">
-                          <span class="name mb-0 text-sm">{{ $dados->nome_estudante }}</span>
-                        </div>
-                      </div>
-                    </th>
-                    <td class="budget">
-                      {{ $dados->bi_estudante }}
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <span class="status">{{ $dados->data_nascimento }}</span>
-                      </span> 
-                    </td>
-                    <td>
-                      <span class="badge badge-dot mr-4">
-                        <span class="status">{{ $dados->telefone }}</span>
-                      </span> 
-                    </td>
-                    <td> 
-                      <div class="avatar-group">
-                        <button type="button" class="edit btn btn-outline-success" name="edit" id="{{ $dados->id }}">Editar</button>
-                        <button type="button" class="btn btn-outline-danger">Apagar</button>
-                        <button type="button" class="btn btn-outline-warning">Ver</button>
-                      </div>
-                    </td>
-                  </tr>
-                  @endforeach
-                </tbody>
-              </table>
-            </div>
+        <div class="col"> <br> <br> <br> <br>
+        <div class="card">
+          <h3 class="card-header bg-dark text-white">Licenciatura</h3>
+          <div class="card-body bg-dark">
+            <h2 class="card-title text-white">UAN-FC - Ciências da computação</h2>
+            <p class="card-text text-white">Licenciatura em Ciências da computação, no ano de 2017.</p>
+            <a href="#" class="btn btn-primary">Concluída</a>
           </div>
+        </div>
+        <div class="card">
+          <h3 class="card-header bg-dark text-white">Mestrado</h3>
+          <div class="card-body bg-dark">
+            <h2 class="card-title text-white">UCAN - Ciências da computação</h2>
+            <p class="card-text text-white">Licenciatura em Ciências da computação, no ano de 2017.</p>
+            <a href="#" class="btn btn-warning">Pendente</a>
+          </div>
+        </div>
+        <div class="card">
+          <h3 class="card-header bg-dark text-white">Dotoramento</h3>
+          <div class="card-body bg-dark">
+            <h2 class="card-title text-white">UK - Ciências da computação</h2>
+            <p class="card-text text-white">Licenciatura em Ciências da computação, no ano de 2017.</p>
+            <a href="#" class="btn btn-warning">Pendente</a>
+          </div>
+        </div>
         </div>
       </div>
       <!-- Footer -->

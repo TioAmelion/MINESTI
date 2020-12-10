@@ -16,9 +16,11 @@ class CreateUniversidadesTable extends Migration
         Schema::create('universidades', function (Blueprint $table) {
             $table->increments('id');
             $table->string('nome_universidade');
-            $table->unsignedInteger('id_utilizador');
+
+            $table->unsignedInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->string('apelido');
             $table->string('localizacao');
-            $table->foreign('id')->references('id')->on('users');
             $table->timestamps();
         });
     }
